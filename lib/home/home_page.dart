@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sendme_work/common/payment_method_widget.dart';
+import 'package:sendme_work/common/top_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,14 +14,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Text('Hi Sullivan!'),
-        actions: [
-          OutlinedButton(onPressed: () {}, child: const Icon(Icons.menu))
-        ],
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: Column(
         children: [
+          TopBar(),
           const Divider(
             color: Colors.grey,
           ),
