@@ -26,6 +26,7 @@ class _HomePageState extends State<HomePage> {
           //Card
           Expanded(
             child: ListView(
+              scrollDirection: Axis.horizontal,
               children: const [
                 PaymentMethodWidget(),
                 PaymentMethodWidget(),

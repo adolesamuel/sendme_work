@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sendme_work/core/utils/color.dart';
 
 class TopBar extends StatelessWidget {
   TopBar({Key? key}) : super(key: key);
-
-  final Color color = Colors.grey.shade300;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,9 @@ class TopBar extends StatelessWidget {
             width: 40,
             decoration: BoxDecoration(
               border: Border.all(
-                  color: color, width: 1.0, style: BorderStyle.solid),
+                  color: AppColor.appgrey,
+                  width: 1.0,
+                  style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(4.0),
             ),
             child: const Icon(Icons.menu),

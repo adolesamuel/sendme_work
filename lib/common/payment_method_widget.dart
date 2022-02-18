@@ -1,31 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:sendme_work/core/utils/color.dart';
 
 class PaymentMethodWidget extends StatelessWidget {
   const PaymentMethodWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 250,
-      height: 250,
-      decoration: BoxDecoration(
-          color: Colors.grey, borderRadius: BorderRadius.circular(10.0)),
-      child: Column(
-        children: [
-          //Payment method Image.
-          const Text('Paypal Image'),
+    return Center(
+      child: Container(
+        width: 150,
+        height: 150,
+        margin: EdgeInsets.all(16.0),
+        decoration: BoxDecoration(
+            color: AppColor.paymentMethodGrey,
+            borderRadius: BorderRadius.circular(10.0)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            //Payment method Image.
+            const Text('Paypal Image'),
 
-          //
-          const Text('Payment Method Name'),
+            //
+            const Text('Payment Method Name'),
 
-          //
-          Row(
-            children: const [
-              Text('\$'),
-              Text('1,260.28'),
-            ],
-          ),
-        ],
+            //
+            Row(
+              children: const [
+                Text('\$'),
+                Text('1,260.28'),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
