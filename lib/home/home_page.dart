@@ -22,14 +22,30 @@ class _HomePageState extends State<HomePage> {
           TopBar(),
           const Divider(
             color: Colors.grey,
+            height: 1.0,
           ),
           //Card
-          Expanded(
+          SizedBox(
+            height: 200,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: const [
-                PaymentMethodWidget(),
-                PaymentMethodWidget(),
+                PaymentMethodWidget(
+                  paymentMethodName: 'PayPal',
+                  paymentMethodImage: AssetImage('assets/paypal.png'),
+                ),
+                PaymentMethodWidget(
+                  paymentMethodName: 'Amazon Pay',
+                  paymentMethodImage: AssetImage('assets/amazon.png'),
+                ),
+                PaymentMethodWidget(
+                  paymentMethodName: 'Amazon Pay',
+                  paymentMethodImage: AssetImage('assets/amazon.png'),
+                ),
+                PaymentMethodWidget(
+                  paymentMethodName: 'Amazon Pay',
+                  paymentMethodImage: AssetImage('assets/amazon.png'),
+                ),
               ],
             ),
           ),
