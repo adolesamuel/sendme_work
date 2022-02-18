@@ -18,7 +18,11 @@ class PaymentMethodWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             //Payment method Image.
-            const Text('Paypal Image'),
+            Image.asset(
+              'assets/paypal.png',
+              height: 50,
+              width: 50,
+            ),
 
             //
             const Text('Payment Method Name'),
