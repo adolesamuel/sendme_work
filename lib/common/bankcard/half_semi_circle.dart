@@ -5,27 +5,30 @@ import 'package:flutter/material.dart';
 class HalfSemiCircle extends StatelessWidget {
   final double diameter;
   final Color color;
+  final bool onIntro;
 
   const HalfSemiCircle({
     Key? key,
     this.diameter = 200,
     required this.color,
+    this.onIntro = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter: MyPainter(color),
+      painter: _MyPainter(color, onIntro: onIntro),
       size: Size(diameter, diameter),
     );
   }
 }
 
 // This is the Painter class
-class MyPainter extends CustomPainter {
+class _MyPainter extends CustomPainter {
   final Color color;
+  final bool onIntro;
 
-  MyPainter(this.color);
+  _MyPainter(this.color, {this.onIntro = false});
 
   Color lighten(Color c, [int percent = 10]) {
     assert(1 <= percent && percent <= 100);
@@ -51,15 +54,23 @@ class MyPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()
-      ..shader = LinearGradient(colors: [
-        color,
-        color.computeLuminance() > 0.5 ? darken(color, 10) : lighten(color, 10)
-      ]).createShader(Rect.fromCenter(
-        center: Offset(size.height / 2, size.width / 2),
-        height: size.height,
-        width: size.width,
-      ));
+    Paint paint;
+
+    if (onIntro) {
+      paint = Paint()..color = color;
+    } else {
+      paint = Paint()
+        ..shader = LinearGradient(colors: [
+          color,
+          color.computeLuminance() > 0.5
+              ? darken(color, 10)
+              : lighten(color, 10)
+        ]).createShader(Rect.fromCenter(
+          center: Offset(size.height / 2, size.width / 2),
+          height: size.height,
+          width: size.width,
+        ));
+    }
 
     //draw one semi circle
     canvas.drawArc(

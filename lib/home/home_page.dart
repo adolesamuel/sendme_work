@@ -123,7 +123,7 @@ class _HomePageState extends State<HomePage> {
                     child: Image(
                       image: const AssetImage('assets/map.png'),
                       width: MediaQuery.of(context).size.width * 0.95,
-                      height: 250.0,
+                      height: 200.0,
                       fit: BoxFit.fitWidth,
                     ),
                   ),
