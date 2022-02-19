@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sendme_work/common/bank_card.dart';
-import 'package:sendme_work/common/card_data.dart';
+import 'package:sendme_work/common/bankcard/bank_card.dart';
+import 'package:sendme_work/common/bankcard/card_data.dart';
 import 'package:sendme_work/common/payment_method_widget.dart';
 import 'package:sendme_work/common/top_bar.dart';
 import 'package:sendme_work/super_card/super_card_page.dart';
@@ -36,22 +36,26 @@ class _HomePageState extends State<HomePage> {
               height: 200,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: const [
+                children: [
                   PaymentMethodWidget(
                     paymentMethodName: 'PayPal',
-                    paymentMethodImage: AssetImage('assets/paypal.png'),
+                    paymentMethodImage: const AssetImage('assets/paypal.png'),
+                    value: 1260.28,
                   ),
                   PaymentMethodWidget(
                     paymentMethodName: 'Amazon Pay',
-                    paymentMethodImage: AssetImage('assets/amazon.png'),
+                    paymentMethodImage: const AssetImage('assets/amazon.png'),
+                    value: 285.62,
+                  ),
+                  PaymentMethodWidget(
+                    paymentMethodName: 'PayPal',
+                    paymentMethodImage: const AssetImage('assets/paypal.png'),
+                    value: 1260.28,
                   ),
                   PaymentMethodWidget(
                     paymentMethodName: 'Amazon Pay',
-                    paymentMethodImage: AssetImage('assets/amazon.png'),
-                  ),
-                  PaymentMethodWidget(
-                    paymentMethodName: 'Amazon Pay',
-                    paymentMethodImage: AssetImage('assets/amazon.png'),
+                    paymentMethodImage: const AssetImage('assets/amazon.png'),
+                    value: 285.62,
                   ),
                 ],
               ),

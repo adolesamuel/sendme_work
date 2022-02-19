@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:number_display/number_display.dart';
-import 'package:sendme_work/common/card_data.dart';
-import 'package:sendme_work/common/half_semi_circle.dart';
+import 'package:sendme_work/common/bankcard/half_semi_circle.dart';
+import 'package:sendme_work/common/bankcard/card_data.dart';
 import 'package:sendme_work/core/utils/color.dart';
 
 class BankCardWidget extends StatelessWidget {

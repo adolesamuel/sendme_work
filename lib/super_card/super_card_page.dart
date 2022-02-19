@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sendme_work/common/card_data.dart';
+import 'package:sendme_work/common/bankcard/card_data.dart';
 import 'package:sendme_work/common/top_bar.dart';
 
-import '../common/bank_card.dart';
+import '../common/bankcard/bank_card.dart';
 
 class SuperCardPage extends StatefulWidget {
   const SuperCardPage({Key? key}) : super(key: key);

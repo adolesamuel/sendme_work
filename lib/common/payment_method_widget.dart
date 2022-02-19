@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:number_display/number_display.dart';
 import 'package:sendme_work/core/utils/color.dart';
 
 class PaymentMethodWidget extends StatelessWidget {
   final String paymentMethodName;
   final ImageProvider<Object> paymentMethodImage;
+  final double value;
 
-  const PaymentMethodWidget({
+  PaymentMethodWidget({
     Key? key,
     required this.paymentMethodName,
     required this.paymentMethodImage,
+    required this.value,
   }) : super(key: key);
+
+  final displayValue = createDisplay();
 
   @override
   Widget build(BuildContext context) {
@@ -51,13 +56,26 @@ class PaymentMethodWidget extends StatelessWidget {
                 const SizedBox(
                   height: 4.0,
                 ),
-
-                //
-                Row(
-                  children: const [
-                    Text('\$'),
-                    Text('1,260.28'),
-                  ],
+                SizedBox(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        '\$',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      const SizedBox(
+                        width: 4.0,
+                      ),
+                      Text(
+                        displayValue(value),
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
