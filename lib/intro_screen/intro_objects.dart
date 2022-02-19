@@ -24,15 +24,15 @@ class _MyPainter extends CustomPainter {
 
     canvas.drawRect(
         Rect.fromCenter(
-          center: Offset(size.width / 2, 80),
+          center: Offset(size.width / 2, 138),
           width: 12,
-          height: size.height / 9,
+          height: 50,
         ),
         orangePaint);
 
     canvas.drawArc(
         Rect.fromCenter(
-          center: Offset(size.width / 1.8, 80 * 1.75),
+          center: Offset(size.width / 1.8, 113 * 1.75),
           width: 70,
           height: 70,
         ),
@@ -43,7 +43,7 @@ class _MyPainter extends CustomPainter {
 
     canvas.drawArc(
         Rect.fromCenter(
-          center: Offset(size.width / 1.8, 80 * 2),
+          center: Offset(size.width / 1.8, 110 * 2),
           width: 170,
           height: 170,
         ),
@@ -54,7 +54,7 @@ class _MyPainter extends CustomPainter {
 
     canvas.drawArc(
         Rect.fromCenter(
-          center: Offset(size.width / 1.8, 80 * 3.23),
+          center: Offset(size.width / 1.8, 98 * 3.23),
           width: 25,
           height: 25,
         ),
