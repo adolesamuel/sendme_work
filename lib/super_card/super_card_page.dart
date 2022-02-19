@@ -49,7 +49,7 @@ class SuperCardPageState extends State<SuperCardPage> {
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Column(
           children: [
-            TopBar(text: 'Super Card'),
+            const TopBar(text: 'Super Card'),
             const Divider(
               color: Colors.grey,
               height: 1.0,
@@ -87,7 +87,8 @@ class SuperCardPageState extends State<SuperCardPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: OutlinedButton.icon(
                       style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: Colors.grey, width: 1.2)),
+                          side:
+                              const BorderSide(color: Colors.grey, width: 1.2)),
                       onPressed: () {},
                       icon: const Icon(
                         Icons.add,

@@ -3,7 +3,7 @@ import 'package:sendme_work/core/utils/color.dart';
 
 class TopBar extends StatelessWidget {
   final String? text;
-  TopBar({Key? key, this.text}) : super(key: key);
+  const TopBar({Key? key, this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

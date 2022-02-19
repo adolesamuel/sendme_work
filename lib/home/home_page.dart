@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TopBar(),
+              const TopBar(),
               const Divider(
                 color: Colors.grey,
                 height: 1.0,
