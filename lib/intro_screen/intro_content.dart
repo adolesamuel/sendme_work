@@ -46,7 +46,7 @@ class IntroContent extends StatelessWidget {
                 const SizedBox(
                   width: 250,
                   child: Text(
-                    'Best solution to save yoour balance & transactions',
+                    'Best solution to save your balance & transactions',
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.white, fontSize: 18.0),
                   ),

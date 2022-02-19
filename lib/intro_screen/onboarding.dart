@@ -14,7 +14,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   final introKey = GlobalKey<IntroductionScreenState>();
 
   void _onIntroEnd(context) {
-    Navigator.of(context).pushReplacementNamed('/');
+    Navigator.pushReplacementNamed(context, '/navbar');
   }
 
   @override
@@ -61,6 +61,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       ),
       rawPages: const [
         IntroContent(),
+        //So the two dots can show
         SizedBox(),
         SizedBox(),
       ],

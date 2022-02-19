@@ -16,13 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
-      initialRoute: '/onboarding',
+      initialRoute: '/',
       routes: {
-        '/': (context) => const NavBar(),
-        '/onboarding': (context) => const OnBoardingPage(),
+        '/navbar': (context) => const NavBar(),
+        '/': (context) => const OnBoardingPage(),
         '/super_card': (context) => const SuperCardPage(),
         '/home': (context) => const HomePage(),
       },
