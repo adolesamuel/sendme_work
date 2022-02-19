@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sendme_work/core/utils/color.dart';
 
 class TopBar extends StatelessWidget {
-  TopBar({Key? key}) : super(key: key);
+  final String? text;
+  TopBar({Key? key, this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,20 +11,28 @@ class TopBar extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Row(
-          children: const [
-            Text(
-              'Hi, ',
-              style: TextStyle(
-                fontSize: 20,
+          children: [
+            if (text == null) ...const [
+              Text(
+                'Hi, ',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
               ),
-            ),
-            Text(
-              'Sullivan!',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+              Text(
+                'Sullivan!',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
+            ],
+            if (text != null)
+              Text(
+                text!,
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              )
           ],
         ),
         InkWell(

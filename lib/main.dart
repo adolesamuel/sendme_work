@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sendme_work/super_card/super_card_page.dart';
 
 import 'home/home_page.dart';
 
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/super_card': (context) => const SuperCardPage(),
+      },
     );
   }
 }

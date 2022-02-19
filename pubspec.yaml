@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   introduction_screen: ^2.1.0
+  number_display: ^3.0.0
 
 
 
