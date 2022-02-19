@@ -64,7 +64,7 @@ class MyPainter extends CustomPainter {
     //draw one semi circle
     canvas.drawArc(
       Rect.fromCenter(
-        center: Offset(size.height, size.width / 2),
+        center: Offset(size.width, size.height / 2),
         height: size.height,
         width: size.width,
       ),
@@ -77,7 +77,7 @@ class MyPainter extends CustomPainter {
     //draw other semi circle
     canvas.drawArc(
       Rect.fromCenter(
-        center: Offset(0, size.width / 2),
+        center: Offset(0, size.height / 2),
         height: size.height,
         width: size.width,
       ),
